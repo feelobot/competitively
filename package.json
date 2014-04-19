@@ -1,8 +1,8 @@
 {
-  "name": "sailsjs-angularjs-bootstrap-example",
+  "name": "competitively",
   "private": true,
-  "version": "0.0.2",
-  "description": "A Sails.js / AngularJS / Twitter Bootstrap example application",
+  "version": "0.0.2-2",
+  "description": "A competition platform",
   "dependencies": {
     "sails": "0.9.8",
     "grunt": "0.4.2",
@@ -21,9 +21,13 @@
   },
   "main": "app.js",
   "repository": "",
-  "author": "Christopher Martin <cgmartin@gmail.com>",
+  "author": "Felix Rodriguez <feelobot@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "grunt-contrib-less": "~0.8.3"
+  },
+  "subdomain": "competitively",
+  "engines": {
+    "node": "0.10.x"
   }
 }
