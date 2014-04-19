@@ -1,11 +1,11 @@
 {
   "name": "competitively",
   "private": true,
-  "version": "0.0.2-3",
+  "version": "0.0.2-4",
   "description": "A competition platform",
   "dependencies": {
     "sails": "0.9.8",
-    "sails-mongo" : "0.10.0",
+    "sails-mongo": "0.10.x",
     "grunt": "0.4.2",
     "sails-disk": "~0.9.0",
     "optimist": "0.3.4",
