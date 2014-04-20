@@ -19,7 +19,7 @@
   },
   "scripts": {
     "predeploy": "echo This will be run before deploying the app",
-    "postdeploy": "bower install",
+    "postdeploy": "node bower_install.js",
     "start": "node app.js",
     "debug": "node debug app.js"
   },
