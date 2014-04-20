@@ -17,6 +17,8 @@
     "passport-local": "0.1.6"
   },
   "scripts": {
+    "predeploy": "echo This will be run before deploying the app",
+    "postdeploy": "node bower_install.js",
     "start": "node app.js",
     "debug": "node debug app.js"
   },
