@@ -1,7 +1,7 @@
 {
   "name": "competitively",
   "private": true,
-  "version": "0.0.2-5",
+  "version": "0.0.2-7",
   "description": "A competition platform",
   "dependencies": {
     "sails": "0.9.8",
@@ -19,7 +19,7 @@
   },
   "scripts": {
     "predeploy": "echo This will be run before deploying the app",
-    "postdeploy": "node bower_install.js",
+    "postdeploy": "bower install",
     "start": "node app.js",
     "debug": "node debug app.js"
   },
