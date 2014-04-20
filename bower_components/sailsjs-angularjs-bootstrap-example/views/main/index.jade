@@ -1,0 +1,80 @@
+extends ../layout
+
+block body
+  div#fb-root
+  script.
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=484120638294778";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+  .navbar.navbar-inverse.navbar-static-top(role="navigation")
+    .navbar-header
+            button.navbar-toggle(type="button", data-toggle="collapse", data-target=".navbar-collapse")
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href="#") Project name
+          .navbar-collapse.collapse
+            ul.nav.navbar-nav
+              li.active
+                a(href="/") Home
+              li
+                a(href="/new") New
+            .navbar-right(style="padding: 1% 10% 0 0")
+              .fb-login-button(data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true")
+          //
+            /.navbar-collapse 
+  .container
+    
+    // Main jumbotron for a primary marketing message or call to action 
+    .jumbotron
+      .container
+        h1= featured_name
+        p= featured_description
+        p
+          a.btn.btn-primary.btn-lg(href="#", role="button") Learn more »
+    .container
+      .navbar.navbar-inverse.navbar-static(role="navigation")
+        .navbar-header
+          button.navbar-toggle(type="button", data-toggle="collapse", data-target=".navbar-collapse")
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        .navbar-collapse.collapse
+          form.navbar-form.navbar-left
+            .form-group
+              input.form-control(type="text", placeholder="Search")
+            button.btn.btn-success(type="submit") Search
+          .dropdown
+            button.btn.dropdown-toggle.sr-only(type="button" id="dropdownMenu1" data-toggle="dropdown") Dropdown
+              span.caret
+            ul.dropdown-menu(role="menu" aria-labelledby="dropdownMenu1")
+              li(role="presentation")
+                a(role="menuitem" tabindex="-1" href="#") Action
+              li(role="presentation")
+                a(role="menuitem" tabindex="-1" href="#") Another action
+        //
+          /.navbar-collapse 
+    .container
+      // Three columns of text below the carousel
+      .row
+        each competition, index in top_competitions
+          if index % 3 == 0 
+            .row 
+          .col-md-4
+            .thumbnail
+              img(src="http://lorempixel.com/600/200/people")
+              .caption
+              .h3= competition.name
+              p= competition.description
+              p
+                a.btn.btn-primary.btn-lg(href="#", role="button") Learn more »
+            
+          // /.col-lg-4
+    hr
+    footer
+      p &copy; Company 2013

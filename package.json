@@ -1,7 +1,7 @@
 {
   "name": "competitively",
   "private": true,
-  "version": "0.0.2-8",
+  "version": "0.0.2-9",
   "description": "A competition platform",
   "dependencies": {
     "sails": "0.9.8",
