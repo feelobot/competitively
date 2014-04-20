@@ -1,58 +1,47 @@
-<form class="form-horizontal" action="/competition/create" method="post">
-<fieldset>
+extends ../layout
 
-<!-- Form Name -->
-<legend>New Competition</legend>
-
-<!-- Text input-->
-<div class="input-group">
-  <label class="col-md-4 control-label" for="name">Name</label>  
-  <div class="col-md-5">
-  <input id="name" name="name" type="text" placeholder="" class="form-control input-md" required="">
-    
-  </div>
-</div>
-
-<!-- Textarea -->
-<div class="input-group">
-  <label class="col-md-4 control-label" for="description">Description</label>
-  <div class="col-md-4">                     
-    <textarea class="form-control" id="description" name="description"></textarea>
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="input-group">
-  <label class="col-md-4 control-label" for="tags">Tags</label>  
-  <div class="col-md-8">
-  <input id="tags" name="tags" type="text" placeholder="" class="form-control input-md">
-    
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="input-group input-group-lg">
-  <label class="col-md-4 control-label" for="img_url">Image URL</label>  
-  <div class="col-md-8">
-  <input id="img_url" name="img_url" type="text" placeholder="" class="form-control input-md">
-    
-  </div>
-</div>
-
-<!-- File Button --> 
-<div class="input-group input-group-lg">
-  <label class="col-md-4 control-label" for="image">Image</label>
-  <div class="col-md-4">
-    <input id="image" name="image" class="input-file" type="file">
-  </div>
-</div>
-
-<!-- Button -->
-<div class="control-group">
-  <div class="controls">
-    <button id="submitButton" name="submitButton" class="btn btn-primary">Submit</button>
-  </div>
-</div>
-
-</fieldset>
-</form>
+block body
+  .container
+    // Main jumbotron for a primary marketing message or call to action 
+    .jumbotron
+      .container
+        h1 Competition Name
+        p 
+          | consequat sagittis mollit nulla, nobis porttitor, netus ut, ut excepteur class, saepe? Nibh praesent, aliquam. Culpa repellat commodo?
+        p
+          a.btn.btn-primary.btn-lg(href="#", role="button") Learn more »
+  .container
+    legend New Competition
+    form.form-horizontal(role='form', action='/competition/create', method='post')
+    .form-group
+      label.col-sm-2.control-label(for='inputEmail') Name
+      .col-sm-10
+        input#inputName.form-control(type='name', placeholder='Name')
+    .form-group
+      label.col-sm-2.control-label(for='textDescription') Description
+      .col-sm-10
+        textarea#textDescription.form-control(type='description', placeholder='Name')
+    .form-group
+      label.col-sm-2.control-label(for='inputEmail') Email
+      .col-sm-10
+        input#inputEmail.form-control(type='email', placeholder='Email')
+    .form-group
+      label.col-sm-2.control-label(for='inputPassword') Tags
+      .col-sm-10
+        input#inputTags.form-control(type='tags', placeholder='Tags')
+    // File Button 
+    .form-group
+      .input-group.input-group-lg
+      label.col-sm-2.control-label(for='image') Image
+      .col-sm-10
+        input#image.input-file(name='image', type='file')
+    .form-group
+      .col-sm-offset-2.col-sm-10
+        .checkbox
+          label
+            input(type='checkbox')
+            | Featured?
+    .form-group
+      .col-sm-offset-2.col-sm-10
+        button.btn.btn-default(type='submit') Submit
+    hr

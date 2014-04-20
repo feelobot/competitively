@@ -13,7 +13,7 @@ module.exports = {
     });
   },
   new: function (req,res) {
-    res.render('main/new');
+    res.render('competition/new', { _layoutFile: '../layout.ejs'});
   },
 
   _config: {}
