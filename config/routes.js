@@ -40,9 +40,6 @@ module.exports.routes = {
     controller: 'CompetitionController',
     action: 'new'
   },
-  '/rest-examples': {
-    view: 'main/rest'
-  },
   '/todos': 'MainController.todos',
 
   //

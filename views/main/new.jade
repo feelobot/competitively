@@ -11,37 +11,36 @@ block body
         p
           a.btn.btn-primary.btn-lg(href="#", role="button") Learn more »
   .container
-    legend New Competition
     form.form-horizontal(role='form', action='/competition/create', method='post')
-    .form-group
-      label.col-sm-2.control-label(for='inputEmail') Name
-      .col-sm-10
-        input#inputName.form-control(type='name', placeholder='Name')
-    .form-group
-      label.col-sm-2.control-label(for='textDescription') Description
-      .col-sm-10
-        textarea#textDescription.form-control(type='description', placeholder='Name')
-    .form-group
-      label.col-sm-2.control-label(for='inputEmail') Email
-      .col-sm-10
-        input#inputEmail.form-control(type='email', placeholder='Email')
-    .form-group
-      label.col-sm-2.control-label(for='inputPassword') Tags
-      .col-sm-10
-        input#inputTags.form-control(type='tags', placeholder='Tags')
-    // File Button 
-    .form-group
-      .input-group.input-group-lg
-      label.col-sm-2.control-label(for='image') Image
-      .col-sm-10
-        input#image.input-file(name='image', type='file')
-    .form-group
-      .col-sm-offset-2.col-sm-10
-        .checkbox
-          label
-            input(type='checkbox')
-            | Featured?
-    .form-group
-      .col-sm-offset-2.col-sm-10
-        button.btn.btn-default(type='submit') Submit
-    hr
+      fieldset
+      .form-group
+        label.col-sm-2.control-label(for='name') Name
+        .col-sm-10
+          input#name.form-control(type='text', name="name", required="true", placeholder='Name')
+      .form-group
+        label.col-sm-2.control-label(for='description') Description
+        .col-sm-10
+          textarea#description.form-control(type='text',name="description", placeholder='Description')
+      .form-group
+        label.col-sm-2.control-label(for='email') Email
+        .col-sm-10
+          input#email.form-control(type='email', placeholder='Email')
+      .form-group
+        label.col-sm-2.control-label(for='tags') Tags
+        .col-sm-10
+          input#tags.form-control(type='tags', placeholder='Tags')
+      // File Button 
+      .form-group
+        .input-group.input-group-lg
+        label.col-sm-2.control-label(for='image') Image
+        .col-sm-10
+          input#image.input-file(name='image', type='file')
+      .form-group
+        .col-sm-offset-2.col-sm-10
+          .checkbox
+            label
+              input(type='checkbox', name="is_featured")
+              | Featured?
+      .form-group
+        .col-sm-offset-2.col-sm-10
+          button.btn.btn-default(type='submit', method='post') Submit
