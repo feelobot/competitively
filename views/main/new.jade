@@ -2,11 +2,11 @@ extends ../layout
 
 block body
   .container
-    // Main jumbotron for a primary marketing message or call to action 
+    // Main jumbotron for a primary marketing message or call to action
     .jumbotron
       .container
         h1 Competition Name
-        p 
+        p
           | consequat sagittis mollit nulla, nobis porttitor, netus ut, ut excepteur class, saepe? Nibh praesent, aliquam. Culpa repellat commodo?
         p
           a.btn.btn-primary.btn-lg(href="#", role="button") Learn more »
@@ -14,33 +14,48 @@ block body
     form.form-horizontal(role='form', action='/competition/create', method='post')
       fieldset
       .form-group
-        label.col-sm-2.control-label(for='name') Name
+        label.col-sm-2.control-label(for='name') Competition Name
         .col-sm-10
-          input#name.form-control(type='text', name="name", required="true", placeholder='Name')
+          input#name.form-control(type='text', name="name", required="true", placeholder='Competition Name')
+      // Summary
+      .form-group
+        label.col-sm-2.control-label(for='tagline') Tagline
+        .col-sm-10
+          textarea#description.form-control(type='text',name="tagline", placeholder='A tagline for your competition the user will see first')
+      // Description
       .form-group
         label.col-sm-2.control-label(for='description') Description
         .col-sm-10
-          textarea#description.form-control(type='text',name="description", placeholder='Description')
+          textarea#description.form-control(type='text',name="description", placeholder='A full description of your competition')
+      // Email
       .form-group
         label.col-sm-2.control-label(for='email') Email
         .col-sm-10
           input#email.form-control(type='email', placeholder='Email')
+      // Twitter
+      .form-group
+        label.col-sm-2.control-label(for='twitter') Twitter
+        .col-sm-10
+          input#tags.form-control(type='twitter', placeholder='Twitter')
+      // Tags
       .form-group
         label.col-sm-2.control-label(for='tags') Tags
         .col-sm-10
           input#tags.form-control(type='tags', placeholder='Tags')
-      // File Button 
+      // Image input
       .form-group
         .input-group.input-group-lg
         label.col-sm-2.control-label(for='image') Image
         .col-sm-10
           input#image.input-file(name='image', type='file')
+      // Checkbox
       .form-group
         .col-sm-offset-2.col-sm-10
           .checkbox
             label
               input(type='checkbox', name="is_featured")
               | Featured?
+      // Submit Button
       .form-group
         .col-sm-offset-2.col-sm-10
-          button.btn.btn-default(type='submit', method='post') Submit
+          button.btn.btn-default.pull-right.btn-large(type='submit', method='post') Submit

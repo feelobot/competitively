@@ -14,7 +14,7 @@ module.exports = {
   //Define an adapter to use
   adapter: 'mongo',
   attributes: {
-  	
+
   	/* e.g.
   	nickname: 'string'
   	*/
@@ -22,8 +22,12 @@ module.exports = {
       type: 'string',
       required: true
     },
+    tagline: {
+      type: 'text',
+      required: true
+    },
     description: {
-      type: 'string',
+      type: 'text',
       required: true
     },
     is_featured: {
@@ -39,12 +43,18 @@ module.exports = {
     end_date: {
       type: 'datetime'
     },
+    twitter: {
+      type: 'string'
+    },
+    entry_fee: {
+      type: 'string'
+    },
     members: {
       type: 'json'
     },
     img_url: {
       type: 'string',
-      defaultsTo: 'http://www.bpw-nc.org/Resources/Pictures/logo.gif'
+    defaultsTo: 'http://lorempixel.com/600/200/people'
     },
     image: {
       type: 'binary'
