@@ -5,18 +5,15 @@ block body
     // Main jumbotron for a primary marketing message or call to action
     .jumbotron
       .container
-        h1= featured_name
-        p= featured_description
-        p
-          a.btn.btn-primary.btn-lg(href="#", role="button") Learn more »
+          a.pull-left(href="#", style="padding-right: 20px;")
+            img.thumbnail.media-object(data-src="holder.js/300x300")
+          h2= featured_name
+          p= featured_description
+          p
+            a.btn.btn-primary.btn-lg(href="#", role="button") Learn more »
     .container
       .navbar.navbar-inverse.navbar-static(role="navigation")
         .navbar-header
-          button.navbar-toggle(type="button", data-toggle="collapse", data-target=".navbar-collapse")
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-        .navbar-collapse.collapse
           form.navbar-form.navbar-left
             .form-group
               input.form-control(type="text", placeholder="Search")
@@ -43,7 +40,8 @@ block body
               .caption
               .h3= competition.name
               p= competition.description
+              - var more_link = "/competition/" + competition.id
               p
-                a.btn.btn-primary.btn-lg(href="#", role="button") Learn more »
+                a.btn.btn-primary.btn-lg(href= more_link, role="button") Learn more »
 
           // /.col-lg-4

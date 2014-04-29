@@ -56,10 +56,15 @@ module.exports = {
       type: 'string',
     defaultsTo: 'http://lorempixel.com/600/200/people'
     },
-    image: {
+    prize: {
+      type: 'string'
+    },
+    prize_img_url: {
       type: 'binary'
     },
-
+    company_url: {
+      type: "string"
+    }
   }
 
 };
