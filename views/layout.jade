@@ -5,7 +5,8 @@ html(ng-app="app")
     // Viewport mobile tag for sensible mobile support
     meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1")
     // STYLES
-    
+    link(rel="stylesheet", href="/linker/styles/font-awesome.css")
+    link(rel="stylesheet", href="/linker/styles/bootstrap.css")
     // STYLES END
     block styles
 
@@ -53,6 +54,8 @@ html(ng-app="app")
     script(type="text/javascript", src="/linker/js/ui-bootstrap-tpls.js")
     script(type="text/javascript", src="/linker/js/socket.io.js")
     script(type="text/javascript", src="/linker/js/angular-socket.io.js")
+    script(type="text/javascript", src="/linker/js/angular-sails.io.js")
+    script(type="text/javascript", src="/linker/js/app.js")
     script(type="text/javascript", src="/linker/js/controllers/restCtrl.js")
     script(type="text/javascript", src="/linker/js/controllers/sailsSocketCtrl.js")
     script(type="text/javascript", src="/linker/js/controllers/todoCtrl.js")
